@@ -123,8 +123,8 @@ class Program
                 try
                 {
                     double result = 0;
-
-                    result = improvedCalculator.Evaluate(expression);
+                    // 
+                    result = improvedCalculator.EvaluateExpression(expression);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error.\n");
@@ -172,16 +172,38 @@ class Program
 
             do
             {
-
-
-
                 Console.WriteLine("\nSelect the calculator \n" +
                     "1) Basic Calculator \n" +
                     "2) Revised Calculator \n" +
                     "3) Improved Calculator\n" +
-                    "4) Exit");
+                    "4) Exit\n");
+                
+                bool enterApp = false;
 
-                choice = Int32.Parse(Console.ReadLine());
+                while (!enterApp)
+                {
+                    Console.WriteLine("Choose your option");
+                    string userInput = Console.ReadLine();
+                    Console.WriteLine("\n");
+
+                    if(int.TryParse(userInput, out choice))
+                    {
+                        choice = Convert.ToInt32(userInput);
+                        enterApp = true;
+                       
+                    }
+                    else
+                    {
+                        Console.WriteLine(" ** Enter valid input ** ");
+                        Console.WriteLine("\nSelect the calculator \n" +
+                    "1) Basic Calculator \n" +
+                    "2) Revised Calculator \n" +
+                    "3) Improved Calculator\n" +
+                    "4) Exit\n");
+                    }
+                   
+                   
+                }
 
                 if (choice == 1)
                 {
@@ -198,7 +220,7 @@ class Program
                 }
                 else if (choice == 4)
                 {
-                    Console.WriteLine("Exiting the application");
+                    Console.WriteLine("Exiting the application" );
                 }
                 else
                 {

@@ -26,10 +26,6 @@ namespace Calculator
                     Console.WriteLine(result);
                    
                     break;
-                case "e":
-                    result = Math.Pow(num1, num2);
-                    break;
-               
                 default:
                     break;
             }

@@ -4,8 +4,8 @@ using System.Data;
 namespace Calculator
 {
 	public class BasicCalculator
-    { 
-     
+    {
+      
         public void BasicOperations(double num1, double num2,string op)
 		{
             // Use a switch statement to do the math.

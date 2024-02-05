@@ -20,13 +20,13 @@ namespace Calculator
         //Metod overloading
         public void results(string expression, string result, string calculator)
         {
-            string fileName = $"/Users/yogeshbasavaraju/Desktop/{calculator}.txt";
+            string fileName = $"/Users/yogeshbasavaraju/Projects/Console_Calculator/Console_Calculator/{calculator}.txt";
             using FileStream filestream = new FileStream(fileName, FileMode.Append, FileAccess.Write);
             using (StreamWriter writer = new StreamWriter(filestream))
             {
                 writer.WriteLine(DateTime.Now.ToString("dd/mm/yyyy HH:mm:ss"));
                 writer.WriteLine($"Given Expression: {expression}");
-                writer.WriteLine("Your result:", result);
+                writer.WriteLine($"Your result:{result}");
                 writer.WriteLine("--------------------------");
             }
 
