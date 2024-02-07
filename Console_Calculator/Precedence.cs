@@ -1,11 +1,10 @@
 ﻿using System;
-namespace Calculator
+
+namespace Console_Calculator
 {
     public class Precedence
     {
-        public Precedence()
-        {
-        }
+     
         //function to check the precedence
         public int PrecedenceCheck(char c)
         {

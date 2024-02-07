@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-namespace Calculator
+namespace Console_Calculator
 {
 	public class RevisedCalculator
 	{

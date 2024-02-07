@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Calculator
+namespace Console_Calculator
 {
 	public class ImprovedOperations
 	{

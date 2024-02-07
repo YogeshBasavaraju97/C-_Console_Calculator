@@ -6,6 +6,11 @@ class Program
 {
     public class ConsoleOperataions
     {
+        //initialised 3 versions of calculator
+        BasicCalculator basicCalculator = new BasicCalculator();
+        ImprovedCalculator improvedCalculator = new ImprovedCalculator();
+        RevisedCalculator revisedCalculator = new RevisedCalculator();
+        //initalised saveResult object to save the result
         SaveResult printResults = new SaveResult();
         public void GetOperations()
         {
@@ -55,22 +60,25 @@ class Program
         public void BasicCalculator()
         {
 
-            double num1 = 0;
-            double num2 = 0;
+            Double num1 = 0;
+            Double num2 = 0;
+
+            //Ask the inputs form the user
             Console.Write("Type a number, and then press Enter: ");
+
             num1 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Type a number, and then press Enter: ");
             num2 = Convert.ToDouble(Console.ReadLine());
             GetOperations();
             Console.WriteLine("Select and press Enter");
             string op = Console.ReadLine();
-            BasicCalculator basicCalculator = new BasicCalculator();
+           
             basicCalculator.BasicOperations(num1, num2, op);
         }
 
         public void RevisedCalculator()
         {
-            RevisedCalculator revisedCalculator = new RevisedCalculator();
+          
             bool endApp = false;
             while (!endApp)
             {
@@ -112,7 +120,7 @@ class Program
 
         public void ImprovedCalculator()
         {
-            ImprovedCalculator improvedCalculator = new ImprovedCalculator();
+           
             bool endApp = false;
 
             while (!endApp)

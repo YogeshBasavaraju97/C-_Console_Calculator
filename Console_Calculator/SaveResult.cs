@@ -1,12 +1,13 @@
 ﻿using System;
-namespace Calculator
+namespace Console_Calculator
 {
 	public class SaveResult
 	{
 		public void results(double num1, double num2, double result,string calculator)
 		{
-            //
-            using FileStream filestream = new FileStream($"{calculator}.txt", FileMode.Append, FileAccess.Write);
+            
+            string filepath = $"/Users/yogeshbasavaraju/Projects/Console_Calculator/Console_Calculator/{calculator}.txt";
+            using FileStream filestream = new FileStream(filepath, FileMode.Append, FileAccess.Write);
             using (StreamWriter writer = new StreamWriter(filestream))
             {
                 writer.WriteLine(DateTime.Now.ToString("dd/mm/yyyy HH:mm:ss"));
@@ -20,8 +21,8 @@ namespace Calculator
         //Metod overloading
         public void results(string expression, string result, string calculator)
         {
-            string fileName = $"/Users/yogeshbasavaraju/Projects/Console_Calculator/Console_Calculator/{calculator}.txt";
-            using FileStream filestream = new FileStream(fileName, FileMode.Append, FileAccess.Write);
+            string filepath = $"/Users/yogeshbasavaraju/Projects/Console_Calculator/Console_Calculator/{calculator}.txt";
+            using FileStream filestream = new FileStream(filepath, FileMode.Append, FileAccess.Write);
             using (StreamWriter writer = new StreamWriter(filestream))
             {
                 writer.WriteLine(DateTime.Now.ToString("dd/mm/yyyy HH:mm:ss"));
