@@ -23,8 +23,6 @@ namespace Console_Calculator
                     break;
                 case "d":
                       result = num1 / num2;
-                    Console.WriteLine(result);
-                   
                     break;
                 default:
                     break;

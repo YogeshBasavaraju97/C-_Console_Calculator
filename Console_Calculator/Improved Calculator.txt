@@ -102,3 +102,27 @@ Your result:167.00
 Given Expression: 56+90(78*67)+5
 Your result:470401.00
 --------------------------
+08/06/2024 03:06:16
+Given Expression: jdsalfkdj;909
+Your result:Undefined 
+--------------------------
+08/50/2024 03:50:30
+Given Expression: 45+98-67/45
+Your result:141.51
+--------------------------
+08/51/2024 03:51:15
+Given Expression: 45-98+78/3
+Your result:-27.00
+--------------------------
+08/52/2024 03:52:37
+Given Expression: 45+98/45*4
+Your result:53.71
+--------------------------
+08/53/2024 03:53:45
+Given Expression: 56+(45/67)-67
+Your result:-10.33
+--------------------------
+08/54/2024 03:54:18
+Given Expression: 89(67/8)+89
+Your result:834.38
+--------------------------

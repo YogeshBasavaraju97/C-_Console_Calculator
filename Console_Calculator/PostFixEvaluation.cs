@@ -22,11 +22,8 @@ namespace Console_Calculator
                 {
                     double num2 = operands.Pop();
                     double num1 = operands.Pop();
-
                     result = performOperations.DoOperation(num1, num2, symbols[i]);
-
                     operands.Push(result);
-
                 }
             }
             return result;

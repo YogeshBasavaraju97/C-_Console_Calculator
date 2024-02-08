@@ -60,15 +60,15 @@ class Program
         public void BasicCalculator()
         {
 
-            Double num1 = 0;
-            Double num2 = 0;
+            int num1 = 0;
+            int num2 = 0;
 
             //Ask the inputs form the user
             Console.Write("Type a number, and then press Enter: ");
 
-            num1 = Convert.ToDouble(Console.ReadLine());
+            num1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Type a number, and then press Enter: ");
-            num2 = Convert.ToDouble(Console.ReadLine());
+            num2 = Convert.ToInt32(Console.ReadLine());
             GetOperations();
             Console.WriteLine("Select and press Enter");
             string op = Console.ReadLine();
@@ -78,18 +78,17 @@ class Program
 
         public void RevisedCalculator()
         {
-          
             bool endApp = false;
             while (!endApp)
             {
-
+                //calling the DoValidation method
                 double[] inputArr = DoValidations();
                 GetOperations();
                 string op = Console.ReadLine();
                 try
                 {
                     double result = 0;
-
+                    //after validatio passing the parameters to DoOperation method
                     result = revisedCalculator.DoOperation(inputArr[0], inputArr[1], op);
                     if (double.IsNaN(result))
                     {
@@ -117,27 +116,32 @@ class Program
 
         }
 
-
         public void ImprovedCalculator()
         {
-           
+            //declared a variable to run while loop
             bool endApp = false;
 
             while (!endApp)
             {
+                //Asking user input
                 Console.WriteLine("Enter the Expression");
                 string expression = Console.ReadLine();
 
                 try
                 {
                     double result = 0;
-                    // 
+                    
+
                     result = improvedCalculator.EvaluateExpression(expression);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error.\n");
                     }
-                    else Console.WriteLine("Your result: {0:0.##}\n", result);
+                    else
+                    {
+                        Console.WriteLine("Your result: {0:0.##}\n", result);
+                    }
+
                     if (double.IsNaN(result))
                     {
                         printResults.results(expression, "Undefined ", "Improved Calculator");
@@ -146,7 +150,6 @@ class Program
                     {
                         printResults.results(expression, result.ToString("F2"), "Improved Calculator");
                     }
-
 
                 }
                 catch (Exception e)
@@ -166,8 +169,6 @@ class Program
 
             }
             return;
-
-
         }
 
         public void SelectCalculator()
@@ -194,11 +195,11 @@ class Program
                     string userInput = Console.ReadLine();
                     Console.WriteLine("\n");
 
-                    if(int.TryParse(userInput, out choice))
+                    if (int.TryParse(userInput, out choice))
                     {
                         choice = Convert.ToInt32(userInput);
                         enterApp = true;
-                       
+
                     }
                     else
                     {
@@ -209,8 +210,6 @@ class Program
                     "3) Improved Calculator\n" +
                     "4) Exit\n");
                     }
-                   
-                   
                 }
 
                 if (choice == 1)
@@ -235,13 +234,10 @@ class Program
                     Console.WriteLine("Enter valid choice");
                 }
 
-
             } while (choice != 4);
         }
 
     }
-
-
     static void Main(string[] args)
     {
         Console.WriteLine();

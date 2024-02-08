@@ -3,6 +3,7 @@ namespace Console_Calculator
 {
 	public class SaveResult
 	{
+        //Method to save the result after each exection
 		public void results(double num1, double num2, double result,string calculator)
 		{
             
